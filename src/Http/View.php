@@ -10,12 +10,26 @@ class View
 {
     private FileSystemLoader $fileSystemLoader;
     private Environment $twig;
-    private TemplateWrapper $template;
+    private string $template;
+    private ?TemplateWrapper $templateWrapper = null;
+    private array $context = [];
 
     public function __construct(string $view_path) {
         $this->fileSystemLoader = new FilesystemLoader('../templates');
         $this->twig = new Environment($this->fileSystemLoader);
         $template_path = str_replace('.', '/', strtolower($view_path));
-        $this->template = $this->twig->load("$template_path.html.twig");
+        $this->template = $template_path;
+    }
+
+    public function with(array $context) : void {
+        $this->context = array_merge($this->context, $context);
+    }
+
+    public function __toString() {
+        if (!$this->templateWrapper) {
+            $this->templateWrapper = $this->twig->load($this->template);
+        }
+
+        return $this->templateWrapper->render($this->context);
     }
 }
