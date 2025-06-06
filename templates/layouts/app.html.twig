@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Grand Penguin Empire{% endblock %}</title>
+    <link rel="stylesheet" href="./css/output.css" />
+    {% endblock %}
+</head>
+<body class="bg-bkg">
+    {% block header %}
+        <header class="w-full flex items-center justify-center py-6 border-y-1 border-text/50">
+            <div class="w-11/12 max-w-[1200px] flex items-center justify-between">
+                <p class="text-2xl font-black text-text">Grand Penguin Empire</p>
+
+                <nav class="flex justify-end items-center gap-4">
+                </nav>
+            </div>
+        </header>
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    <footer></footer>
+
+    {% block scripts %}
+        <script src="./js/app.js" type="module"></script>
+    {% endblock %}
+</body>
+</html>

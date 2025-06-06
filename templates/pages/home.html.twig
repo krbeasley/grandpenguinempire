@@ -1,10 +1,31 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test Page for the GPE</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-</body>
-</html>
+{% extends "layouts/app.html.twig" %}
+
+{% block title %}
+    Home | {{ parent() }}
+{% endblock %}
+
+{% block header %}
+    <div class="w-11/12 max-w-[1400px] flex items-center justify-start py-2 mx-auto">
+        <p class="text-text text-xs" id="desks_obliterated">Desks Obliterated: </p>
+    </div>
+
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+<section class="w-11/12 max-w-[1400px] mx-auto flex flex-col-reverse md:flex-row gap-10">
+    <div class="w-full md:w-2/3 lg:w-3/4 h-full"></div>
+    <div class="w-full md:w-1/3 lg:w-1/4 h-fit max-h-200 flex flex-col gap-4 py-8 px-6 border-l-2 border-l-text/15">
+        <p class="text-text font-black text-lg">Upcoming Events</p>
+
+        <div id="calendar_events_container" class="w-full flex flex-col gap-2"></div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="./js/home.js" type="module"></script>
+    {{ parent() }}
+{% endblock %}
