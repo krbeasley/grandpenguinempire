@@ -17,8 +17,7 @@ class View
     public function __construct(string $view_path) {
         $this->fileSystemLoader = new FilesystemLoader('../templates');
         $this->twig = new Environment($this->fileSystemLoader);
-        $template_path = str_replace('.', '/', strtolower($view_path));
-        $this->template = $template_path;
+        $this->template = $view_path;
     }
 
     public function with(array $context) : void {
