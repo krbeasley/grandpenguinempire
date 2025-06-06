@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\View;
+
 class HomeController extends Controller
 {
-    public function index() {
-        return "Hello world!";
+    public function index() : View {
+        return new View("pages.home");
     }
 }
