@@ -15,7 +15,7 @@ class View
     private array $context = [];
 
     public function __construct(string $view_path) {
-        $this->fileSystemLoader = new FilesystemLoader('../templates');
+        $this->fileSystemLoader = new FilesystemLoader('./templates');
         $this->twig = new Environment($this->fileSystemLoader);
         $this->template = $view_path . ".html.twig";
     }

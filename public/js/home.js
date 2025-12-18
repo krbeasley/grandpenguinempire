@@ -1,23 +1,9 @@
-import {getDesksObliterated, getEvents} from "./utilities/GoogleHelper.js";
-import { upcomingEventCard } from "./components/ui.js";
+import { getGameNightData, inputGameData } from "./components/game-night.js";
 
-// Desks Obliterated
-const desksText = document.getElementById('desks_obliterated');
-const desksData = await getDesksObliterated();
+// Get the game night data for display on the page
+let tickerElement = document.getElementById('game-night-ticker');
+getGameNightData().then((data) => {
+  console.log("Parsed Game Data");
 
-if (desksData.status === "success") {
-    desksText.innerText = desksText.innerText + ' ' + desksData.data['statistic']
-}
-
-// Upcoming Events
-const eventsContainer = document.getElementById('calendar_events_container');
-const eventsData = await getEvents();
-
-if (eventsData.status === "success") {
-    eventsData.data.forEach((event) => {
-        eventsContainer.appendChild(upcomingEventCard(event))
-    })
-}
-
-console.log(desksData)
-console.log(eventsData)
+  inputGameData(tickerElement, data);
+});

@@ -5,27 +5,45 @@
 {% endblock %}
 
 {% block header %}
-    <div class="w-11/12 max-w-[1400px] flex items-center justify-start py-2 mx-auto">
-        <p class="text-text text-xs" id="desks_obliterated">Desks Obliterated: </p>
-    </div>
-
     {{ parent() }}
 {% endblock %}
 
 {% block content %}
 
-<section class="w-11/12 max-w-[1400px] mx-auto flex flex-col-reverse md:flex-row gap-10">
-    <div class="w-full md:w-2/3 lg:w-3/4 h-full"></div>
-    <div class="w-full md:w-1/3 lg:w-1/4 h-fit max-h-200 flex flex-col gap-4 py-8 px-6 border-l-2 border-l-text/15">
-        <p class="text-text font-black text-lg">Upcoming Events</p>
+{% include "components/game-night.html.twig" with { 'id' : 'game-night-ticker' }%}
 
-        <div id="calendar_events_container" class="w-full flex flex-col gap-2"></div>
+<main class="w-full flex items-center justify-center">
+  <div class="w-11/12 max-w-350 text-text py-20 flex items-center justify-center flex-col gap-20">
+
+    {# Hero Section #}
+    <div class="w-full flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center gap-8 justify-center h-80 md:h-100">
+        <p class="text-2xl/8 md:text-4xl/16 text-center">
+          Welcome to the official<sup class="text-text/25">*</sup> website&nbsp;of&nbsp;the<br />
+          <span class="text-secondary font-black uppercase text-4xl md:text-5xl lg:text-7xl">Grand&nbsp;Penguin Empire</span></p>
+        <p class="text-xs text-center text-text/25">* It's not offical</p>
+      </div>
+
+      <div class="w-11/12 max-w-250 flex items-center justify-center">
+        <a onclick="" id="discord-button">Get a link to the discord</a>
+      </div>
     </div>
-</section>
+
+    {# Word from our sponsor #}
+    <div class="flex flex-col py-24 items-center justify-start gap-4">
+      <p class="text-text text-sm capitalize text-center w-full">A quick word from our sponsor</p>
+      <div class="w-11/12 max-w-250 bg-text flex items-center justify-between px-8 py-4 rounded">
+        <img alt="ooh eeh ahh ooh" src="public/img/cat_spin.webp" />
+
+        <p class="text-bkg">ohh ee ee ah ee oh ee ah ee</p>
+      </div>
+    </div>
+  </div>
+</main>
 
 {% endblock %}
 
 {% block scripts %}
-    <script src="./js/home.js" type="module"></script>
+    <script src="public/js/home.js" type="module"></script>
     {{ parent() }}
 {% endblock %}

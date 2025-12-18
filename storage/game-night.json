@@ -1,0 +1,36 @@
+{
+  "games" : [
+    { "title" : "Sonic Adventure 2", "genre" :  "Randomizer" },
+    { "title" : "Nioh", "genre" :  "Soulslike" },
+    { "title" : "Visage", "genre" :  "Horror" },
+    { "title" : "huniepop", "genre" :  "Visual Novel" },
+    { "title" : "Another Crabs Treasure", "genre" :  "Soulslike" },
+    { "title" : "The Golden Compass", "genre" :  "Bottom of the Barrel" },
+    { "title" : "Castlevania: SotN", "genre" :  "Randomizer" },
+    { "title" : "Skyrim", "genre" :  "Randomizer" },
+    { "title" : "Still Wakes the Deep", "genre" :  "Horror" },
+    { "title" : "Lords of The Fallen", "genre" :  "Soulslike" },
+    { "title" : "Slay the Princess", "genre" :  "Visual Novel" },
+    { "title" : "Amnesia", "genre" :  "Horror" },
+    { "title" : "Soma", "genre" :  "Horror" },
+    { "title" : "Gollum", "genre" :  "Bottom of the Barrel" },
+    { "title" : "Lies of P", "genre" :  "Soulslike" },
+    { "title" : "Time and Eternity", "genre" :  "Visual Novel" },
+    { "title" : "Naruto Ninja Storm", "genre" :  "Anime Slop" },
+    { "title" : "Alan Wake", "genre" :  "Horror" },
+    { "title" : "Alone in the Dark", "genre" :  "Horror" },
+    { "title" : "Mario 64", "genre" :  "Randomizer" }
+  ],
+  "players" : [
+    { "name" :  "Thomas", "games" : [7, 10], "results" : ["12:39:03", "3:09:16"] },
+    { "name" :  "Blake", "games" : [0, 2], "results" :  ["7:41:57", "9:14:35"] },
+    { "name" :  "Tyler", "games" : [3, 17], "results" :  ["14:29:07", null] },
+    { "name" :  "Westin", "games" : [4, 11], "results" :  ["16:47:36", "~3:24:38"] },
+    { "name" :  "Will", "games" : [12, 15], "results" :  [null, null] },
+    { "name" :  "Kyle", "games" : [5, 8], "results" :  ["5:39:41", "4:41:28"] },
+    { "name" :  "Anthony", "games" : [1, 19], "results" :  ["16:22:35", null] },
+    { "name" :  "Carson", "games" : [6, 9], "results" :  ["10:40:57", "7:23:00"] },
+    { "name" :  "Ric", "games" : [14, 16], "results" :  [null, null] },
+    { "name" :  "Monika", "games" : [13, 18], "results" :  [null, null] }
+  ]
+}
