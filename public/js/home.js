@@ -7,3 +7,20 @@ getGameNightData().then((data) => {
 
   inputGameData(tickerElement, data);
 });
+
+// Behavior for the discord button
+const discordButton = document.getElementById('discord-button');
+const initPos = {
+  x: discordButton.style.left,
+  y: discordButton.style.top,
+}
+let isMoved = false;
+discordButton.addEventListener('mouseenter', (e) => {
+  // move away from the mouse
+  if (!isMoved) {
+    discordButton.style.opacity = "0";
+    discordButton.style.cursor = "unset";
+  }
+
+  isMoved = !isMoved;
+});
